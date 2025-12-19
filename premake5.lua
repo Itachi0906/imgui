@@ -1,6 +1,6 @@
 project "ImGUI"
-    Kind "StaticLib"
-    Language "C++"
+    kind "StaticLib"
+    language "C++"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -25,6 +25,5 @@ project "ImGUI"
         cppdialect "C++17"
         staticruntime "On" --staticly linking the runtime libraries
 
-    filter {system:windows, configurations:Release}
+    filter {"system:windows", "configurations:Release"}
         buildoptions "/MT"
-
